@@ -1,0 +1,26 @@
+homeassistant: true
+frontend: true
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://qlines.net:1883
+serial:
+  port: /dev/ttyUSB0
+  adapter: ezsp
+advanced:
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+device_options:
+  legacy: false
+devices:
+  '0x50325ffffe0e30f8':
+    friendly_name: wz-west
+  '0xa4c13874751192bc':
+    friendly_name: wz_east
+  '0x94b216fffe9474d7':
+    friendly_name: wz_south
+  '0xa4c138eb698b846d':
+    friendly_name: Babooshka
+  '0xa4c13880b72a024e':
+    friendly_name: kitchen_sensor

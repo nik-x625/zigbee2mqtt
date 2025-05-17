@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt
+    volumes:
+      - ./data:/app/data
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0 # Adjust the serial port if necessary
+    environment:
+      - TZ=Europe/London # Set your timezone
+    ports:
+      - 8080:8080 # Optional: expose Zigbee2MQTT web interface
+    restart: unless-stopped
